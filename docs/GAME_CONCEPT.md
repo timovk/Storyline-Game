@@ -422,14 +422,28 @@ told to and asks when the next Hall tier is coming.
 
 ---
 
-## 14. Open Questions
+## 14. Decisions on the Open Questions
 
-- Should walls be individually upgradeable (the authentic grind) or
-  upgraded in rings (friendlier, less sticky)?
-- Does Ember unlock at Hall 6 or Hall 7? Hall 6 is where the churn spike is,
-  and introducing a scarce resource at the same moment may compound it.
-- How much of the story layer is voiced versus text? Voiced villagers are
-  costly but make the timer-narration land much better.
-- Do heroes become usable during upgrades (less grind, less sting) or not
-  (authentic, harsh)? Leaning toward "usable at half level" as a middle
-  ground.
+These were open in the first draft and have since been decided.
+
+- **Walls are individually upgradeable.** Each segment has its own level and
+  upgrades instantly without a builder. The UI offers an "upgrade adjacent"
+  shortcut on a selected segment so chaining is quick, but every segment is
+  still its own purchase.
+- **Ember unlocks at Hall 7**, not Hall 6. Hall 6 is the churn spike, and a
+  new scarce resource should not land on top of it. Section 4 and the Hall
+  table should be read with this in mind.
+- **The storyline is text-based to start.** Villager dialogue and chapter
+  intros are written text. Voice can be layered on later without changing
+  the system.
+- **Heroes are usable at half level while upgrading.** An upgrading hero
+  fights at half its current level's stats instead of being locked out.
+  This keeps raiding viable through the long hero grind in Phase 4.
+
+## 15. MVP Status
+
+The vertical slice from §13 is implemented in this repository as a
+browser game (TypeScript, canvas, local save). See `README.md` for how to
+run it. Beyond §13 it also simulates an AI counter-raid when the player has
+been away for 3+ hours, so that Archer Posts and Walls have a reason to
+exist before real PvP arrives.
